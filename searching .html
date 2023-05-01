@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<style>
+*{
+margin: 0%;
+padding: 0;
+box-sizing: border-box;
+}
+.container{
+height: 100vh;
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+ 
+}
+.search{
+display:flex;
+ margin: 0 auto;
+}
+
+.container input{
+ height: 2.5rem;
+ width: 14rem;
+ font-size: 2rem;
+}
+
+.search button{
+text-align: right;
+background-color: rgb(255, 254, 254);
+width: 2rem;
+text-align: center;
+border-left: none;
+}
+</style>
+<div class="container">
+<div class="search">
+ <!-- <textarea name="" id="" cols="30" rows="2"></textarea> -->
+ <inputtype="text">
+ <buttononclick="search()" >🔎</button>
+</div>
+ 
+<ul>
+<li>kelvin</li>
+<li>omoh</li>
+<li>Enaikele</li>
+<li>Enaikele1</li>
+<li>Enaikele2</li>
+<li>Enaikele3</li>
+<li>Enaikele4</li>
+<li>Enaikel4e</li>
+<li>Enaikele5</li>
+<li>Enaikel6e</li>
+<li>Enaikele5<li>
+<li>Enaik7ele</li>
+<li>Enaike8le</li>
+<li>Enaikel9e</li>
+<li>Enaikel0-e</li>
+<li>Enaikele-9</li>
+<li>Enaikel2e</li>
+<li>Enaikel75e</li>
+<li>Enaikele</li>
+<li>Enaikele</li>
+<li>Enaikele</li>
+<li>Enaikele</li>
+<li>bolu</li>
+</ul>
+
+ 
+</div>
+
+<script >
+ let input = document.querySelector("input");
+ let li= document.getElementsByTagName("li");
+ let btn = document.querySelector("button")
+
+ input.addEventListener("keyup",search);
+function search (){
+for(i=0;i<li.length;i++){
+if(li[i].innerHTML.toLowerCase().includes(input.value)){
+li[i].style.display="";
+}
+else{
+li[i].style.display="none"
+}
+}
+ }
+
+
+</script>
+</body>
+</html>

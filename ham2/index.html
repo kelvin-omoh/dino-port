@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<style>
+*{
+padding: 0pc;
+margin: 0pc;
+box-sizing: border-box;
+}
+header{
+background-color: black;
+}
+ .title{
+ font-size: 3rem;
+ margin: 7px;
+ color: rgb(188, 172, 172);
+}
+nav{
+min-height: 75px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+ul{
+display: flex;
+align-items: center;
+margin: 0 10px;
+gap: 30px;
+}
+li{
+list-style: none;
+}
+li a{
+color: white;
+text-decoration: none;
+}
+.bar{
+display: block;
+height: 3px;
+margin: 5px;
+width: 26px;
+background-color: red;
+}
+.ham{
+display: none;
+}
+@media(max-width:760px){
+ .ham{
+ display: block;
+ }
+ /* .ul{
+
+ } */
+}
+</style>
+<body> 
+<header>
+ <nav>
+
+ 
+<div class="title">
+Kelvin
+</div>
+
+<ul>
+<li>
+ <a href="">Home</a>
+</li>
+
+<li>
+<a href="">Contact</a>
+</li>
+
+
+<li>
+ <a href="">About</a>
+</li>
+<li>
+ <a href="">🌘darkmode</a>
+</li>
+</ul>
+<div class="ham">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</div>
+ </nav>
+</header>
+
+</body>
+</html>

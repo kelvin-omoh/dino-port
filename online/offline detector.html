@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="/">
+</head>
+<body>
+<style>
+*
+{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+.container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+</style>
+<div class="container">
+<div class="text">
+<h1>youare some where</h1>
+</div>
+
+<div>
+ <input type="range" min="45" max="1000" value="80">
+</div>
+<div class="download">
+<code>click download to downlaod this page </code>
+
+ <a href="./offline detector.html"download=""> <button onclick="v()">Download</button></a>
+ </div>
+
+
+</div>
+</body>
+<script>
+function v(ms){
+ 
+//navigator.vibrate(ms); 
+}
+let h1 = document.querySelector("h1");
+if(navigator.onLine){
+h1.style.color="green";
+h1.innerHTML="you are online "
+}
+ 
+window.addEventListener("offline",()=>{
+h1.style.color="red";
+h1.innerHTML="you are offline"
+})
+
+</script>
+</html>

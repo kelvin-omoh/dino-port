@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<style>
+*{
+ padding: 0;
+ margin: 0%;
+ box-sizing: border-box;
+}
+input{
+padding: 7px;
+ height: 40px;
+}
+fieldset{
+margin-bottom: 20px;
+}
+</style>
+
+<h2 id="title">local store</h2>
+<fieldset>
+<legend>insert data</legend>
+<input type="text" id="inkey" placeholder="enter key.." >
+<input type="text" id="invalue"placeholder="enter value..">
+ <button id="btn">insert data</button>
+</fieldset>
+
+<fieldset>
+<legend>local data</legend>
+ <div id="output"></div>
+</fieldset>
+
+<script>
+const inpkey =document.getElementById("inkey");
+const inpvalue=document.getElementById("invalue")
+const btn =document.getElementById("btn");
+const outputs =document.getElementById("output");
+
+btn.onclick = function(){
+const key = inpkey.value;
+const val = inpvalue.value;
+
+if(key && val){
+localStorage.setItem(key,val);
+location.reload();
+} 
+
+};
+for(let i=0;i<=localStorage.length;i++){
+const key = localStorage.key(i);
+const val = localStorage.getItem(key);
+outputs.innerHTML+=key+':'+val;
+ 
+}
+
+</script>
+</body>
+</html>
